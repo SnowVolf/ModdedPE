@@ -18,18 +18,20 @@ package com.mcal.mcdesign.app;
 
 //##################################################################
 
+import androidx.appcompat.app.AlertDialog;
+
 /**
  * @author Тимашков Иван
  * @author https://github.com/TimScriptov
  */
-public class MCDAlertDialog extends android.support.v7.app.AlertDialog
+public class MCDAlertDialog extends AlertDialog
 //##################################################################
 {
     protected MCDAlertDialog(android.content.Context context) {
         super(context, android.R.style.Theme_Translucent);
     }
 
-    public static class Builder extends android.support.v7.app.AlertDialog.Builder {
+    public static class Builder extends AlertDialog.Builder {
         public Builder(android.content.Context context) {
             super(context);
         }

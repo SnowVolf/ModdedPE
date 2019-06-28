@@ -20,8 +20,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
 import android.provider.Settings;
 import android.view.View;
 
@@ -29,17 +27,6 @@ import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.utils.DataPreloader;
 
 public class SplashesActivity extends BaseActivity implements DataPreloader.PreloadingFinishedListener {
-    Handler mHandler = new Handler() {
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-
-            Intent intent = new Intent(SplashesActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +63,8 @@ public class SplashesActivity extends BaseActivity implements DataPreloader.Prel
 
     @Override
     public void onPreloadingFinished() {
-        mHandler.sendEmptyMessage(0);
+        Intent intent = new Intent(SplashesActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

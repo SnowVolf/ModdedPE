@@ -18,10 +18,9 @@ package com.mcal.mcpelauncher.utils;
 
 import android.util.Base64;
 
-import org.jetbrains.annotations.NotNull;
 
 public class Utils {
-    @NotNull
+
     public static String fromBase64(String message) {
         byte[] data = Base64.decode(message, Base64.DEFAULT);
         return new String(data);

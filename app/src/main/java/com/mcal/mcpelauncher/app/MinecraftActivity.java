@@ -40,13 +40,6 @@ public class MinecraftActivity extends com.mojang.minecraftpe.MainActivity {
         super.onCreate(p1);
     }
 
-	/*@Override
-	protected void onDestroy()
-	{
-		getPESdk().getGameManager().onMinecraftActivityFinish(this);
-		super.onDestroy();
-	}*/
-
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);

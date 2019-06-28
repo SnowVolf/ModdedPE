@@ -20,12 +20,13 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.widget.Toast;
 
-import com.mcal.android.iab.v3.BillingProcessor;
-import com.mcal.android.iab.v3.TransactionDetails;
+import androidx.appcompat.app.AlertDialog;
+
+import com.anjlab.android.iab.v3.BillingProcessor;
+import com.anjlab.android.iab.v3.TransactionDetails;
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.data.Constants;
 
@@ -36,7 +37,7 @@ public class AboutActivity extends BaseActivity implements BillingProcessor.IBil
 
     @Override
     public void onProductPurchased(String p1, TransactionDetails p2) {
-        Toast.makeText(this, "Thanks", 1).show();
+        Toast.makeText(this, "Thanks", Toast.LENGTH_LONG).show();
         bp.consumePurchase(p1);
     }
 
@@ -81,17 +82,17 @@ public class AboutActivity extends BaseActivity implements BillingProcessor.IBil
 
     @Override
     public void onPurchaseHistoryRestored() {
-        // TODO: Implement this method
+
     }
 
     @Override
     public void onBillingError(int p1, Throwable p2) {
-        // TODO: Implement this method
+
     }
 
     @Override
     public void onBillingInitialized() {
-        // TODO: Implement this method
+
     }
 
     private void openUri(String uri) {

@@ -23,17 +23,17 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.preference.ListPreference;
-import android.preference.Preference;
-import android.preference.PreferenceFragment;
-import android.preference.SwitchPreference;
 import android.provider.Settings;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AlertDialog;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.SwitchPreference;
+
+import com.google.android.material.snackbar.Snackbar;
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.utils.I18n;
 import com.mcal.mcpelauncher.utils.UtilsSettings;
@@ -50,25 +50,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-public class MainSettingsFragment extends PreferenceFragment {
-    private UtilsSettings mSettings = null;
-    private SwitchPreference mSafeModePreference = null;
-    private SwitchPreference mBackgroundMusicPreference = null;
-    private SwitchPreference mModdedPEPackPreference = null;
-    private SwitchPreference mDesktopGuiPreference = null;
-    private Preference mDataPathPreference = null;
-    private Preference mAboutPreference = null;
-    private Preference mPkgPreference = null;
-    private ListPreference mLanguagePreference = null;
+public class MainSettingsFragment extends PreferenceFragmentCompat {
+    private UtilsSettings mSettings;
+    private Preference mDataPathPreference;
+    private Preference mPkgPreference;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         addPreferencesFromResource(R.xml.preferences);
 
         mSettings = new UtilsSettings(getActivity());
 
-        mBackgroundMusicPreference = (SwitchPreference) findPreference("background_music");
+        SwitchPreference mBackgroundMusicPreference = (SwitchPreference) findPreference("background_music");
         mBackgroundMusicPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 
             @Override
@@ -80,7 +73,7 @@ public class MainSettingsFragment extends PreferenceFragment {
             }
         });
 
-        mDesktopGuiPreference = (SwitchPreference) findPreference("desktop_gui");
+        SwitchPreference mDesktopGuiPreference = (SwitchPreference) findPreference("desktop_gui");
         mDesktopGuiPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 
             @Override
@@ -126,7 +119,7 @@ public class MainSettingsFragment extends PreferenceFragment {
             }
         });
 
-        mModdedPEPackPreference = (SwitchPreference) findPreference("moddedpe_pack");
+        SwitchPreference mModdedPEPackPreference = (SwitchPreference) findPreference("moddedpe_pack");
         mModdedPEPackPreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference p1, Object p2) {
@@ -170,7 +163,7 @@ public class MainSettingsFragment extends PreferenceFragment {
             }
         });
 
-        mSafeModePreference = (SwitchPreference) findPreference("safe_mode");
+        SwitchPreference mSafeModePreference = (SwitchPreference) findPreference("safe_mode");
         mSafeModePreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 
             @Override
@@ -195,7 +188,7 @@ public class MainSettingsFragment extends PreferenceFragment {
 
 
         });
-        mAboutPreference = findPreference("about");
+        Preference mAboutPreference = findPreference("about");
         mAboutPreference.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
 
             @Override
@@ -219,7 +212,7 @@ public class MainSettingsFragment extends PreferenceFragment {
 
         });
 
-        mLanguagePreference = (ListPreference) findPreference("language");
+        ListPreference mLanguagePreference = (ListPreference) findPreference("language");
         mLanguagePreference.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
 
             @Override
@@ -305,7 +298,7 @@ public class MainSettingsFragment extends PreferenceFragment {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
         if (requestCode == 1) {

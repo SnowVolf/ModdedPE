@@ -16,7 +16,8 @@
  */
 package com.mcal.mcpelauncher.app;
 
-import android.app.Fragment;
+
+import androidx.fragment.app.Fragment;
 
 import com.mcal.mcpelauncher.ModdedPEApplication;
 import com.mcal.pesdk.PESdk;

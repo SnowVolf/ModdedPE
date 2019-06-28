@@ -24,14 +24,15 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.cardview.widget.CardView;
 
 import com.mcal.mcpelauncher.R;
 
@@ -132,7 +133,7 @@ public class NModFilePickerActivity extends BaseActivity {
             }
         }
 
-        ListView fileListView = (ListView) findViewById(R.id.nmod_picker_file_list_view);
+        ListView fileListView = findViewById(R.id.nmod_picker_file_list_view);
         fileListView.setAdapter(new FileAdapter());
     }
 

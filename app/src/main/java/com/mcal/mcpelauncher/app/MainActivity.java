@@ -16,7 +16,6 @@
  */
 package com.mcal.mcpelauncher.app;
 
-import android.app.Fragment;
 import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,12 +23,14 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.support.v13.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.PopupMenu;
 import android.view.MenuItem;
 import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.PopupMenu;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.utils.UtilsSettings;
@@ -211,7 +212,7 @@ public class MainActivity extends BaseActivity implements BackgroundSoundPlayer 
         private List<CharSequence> mTitles;
 
         MainFragmentPagerAdapter(List<Fragment> fragments, List<CharSequence> titles) {
-            super(getFragmentManager());
+            super(getSupportFragmentManager());
             this.mFragments = fragments;
             this.mTitles = titles;
         }
@@ -222,7 +223,7 @@ public class MainActivity extends BaseActivity implements BackgroundSoundPlayer 
         }
 
         @Override
-        public Fragment getItem(int p1) {
+        public androidx.fragment.app.Fragment getItem(int p1) {
             return mFragments.get(p1);
         }
 

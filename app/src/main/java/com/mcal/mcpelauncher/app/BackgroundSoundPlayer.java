@@ -17,6 +17,7 @@
 package com.mcal.mcpelauncher.app;
 
 public interface BackgroundSoundPlayer {
+
     void bind();
 
     void unbind();
@@ -24,4 +25,5 @@ public interface BackgroundSoundPlayer {
     void play();
 
     void pause();
+
 }

@@ -21,8 +21,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.mcal.mcpelauncher.R;
 import com.mcal.pesdk.nmod.ExtractFailedException;

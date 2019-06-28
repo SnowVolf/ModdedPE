@@ -22,13 +22,14 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatImageView;
-import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
+
+import androidx.appcompat.widget.AppCompatImageView;
+import androidx.appcompat.widget.AppCompatTextView;
+import androidx.cardview.widget.CardView;
 
 import com.mcal.mcpelauncher.R;
 import com.mcal.pesdk.nmod.NMod;
@@ -89,7 +90,7 @@ public class NModLoadFailActivity extends BaseActivity {
         mPackageNames = getIntent().getExtras().getStringArrayList(KEY_PACKAGE_NAME);
         mMCData = getIntent().getExtras().getBundle(KEY_MC_DATA);
 
-        ListView errorListView = (ListView) findViewById(R.id.nmod_load_failed_list_view);
+        ListView errorListView = findViewById(R.id.nmod_load_failed_list_view);
         errorListView.setAdapter(new ViewAdapter());
 
         findViewById(R.id.load_failed_next_button).setOnClickListener(new View.OnClickListener() {

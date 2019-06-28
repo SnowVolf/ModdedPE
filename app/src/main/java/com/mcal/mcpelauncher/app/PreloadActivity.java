@@ -20,8 +20,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.widget.AppCompatTextView;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.widget.AppCompatTextView;
 
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.utils.UtilsSettings;
@@ -46,11 +47,11 @@ public class PreloadActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.moddedpe_preloading);
 
-        AppCompatTextView tipsText = (AppCompatTextView) findViewById(R.id.moddedpe_preloading_text);
+        AppCompatTextView tipsText = findViewById(R.id.moddedpe_preloading_text);
         String[] tipsArray = getResources().getStringArray(R.array.preloading_tips_text);
         tipsText.setText(tipsArray[new Random().nextInt(tipsArray.length)]);
 
-        mPreloadingMessageLayout = (LinearLayout) findViewById(R.id.moddedpe_preloading_texts_adapted_layput);
+        mPreloadingMessageLayout = findViewById(R.id.moddedpe_preloading_texts_adapted_layput);
 
         new PreloadThread().start();
     }
@@ -99,11 +100,6 @@ public class PreloadActivity extends BaseActivity {
                     public void onLoadSubstrateLib() {
                         writeNewText(getString(R.string.preloading_loading_lib_substrate));
                     }
-
-                    /*@Override
-                    public void onLoadGnustlSharedLib() {
-                        writeNewText(getString(R.string.preloading_loading_lib_gnustl_shared));
-                    }*/
 
                     @Override
                     public void onLoadFModLib() {
