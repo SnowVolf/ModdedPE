@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_version">Build 25</string>
+    <string name="app_version" translatable="false">Build 25</string>
     <string-array name="target_mcpe_versions">
         <item>^1[.]7</item>
         <item>^1[.]8</item>
@@ -9,11 +9,11 @@
         <item>^1[.]11</item>
         <item>^1[.]12</item>
     </string-array>
-    <string name="target_mcpe_version_info">Minecraft 1.7-1.12.+</string>
-    <string name="app_name">ModdedPE</string>
-    <string name="app_name_trial">ModdedPE Trial</string>
-    <string name="app_name_demo">ModdedPE Demo</string>
-    <string name="app_name_short">ModdedPE</string>
-    <string name="app_name_short_trial">ModdedPE Trial</string>
-    <string name="app_name_short_demo">ModdedPE Demo</string>
+    <string name="target_mcpe_version_info" translatable="false">Minecraft 1.7-1.12.+</string>
+    <string name="app_name" translatable="false">ModdedPE</string>
+    <string name="app_name_trial" translatable="false">ModdedPE Trial</string>
+    <string name="app_name_demo" translatable="false">ModdedPE Demo</string>
+    <string name="app_name_short" translatable="false">ModdedPE</string>
+    <string name="app_name_short_trial" translatable="false">ModdedPE Trial</string>
+    <string name="app_name_short_demo" translatable="false">ModdedPE Demo</string>
 </resources>

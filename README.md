@@ -15,15 +15,7 @@ The Open Source NModAPI will help you a lot:)<br>
 <https://github.com/TimScriptov/NModAPI>
 
 ### Building
-1. Download Aide(IDE for Android) Mod https://mega.nz/#!uI0lmA7I!kX-zzxkJAmpwPYhTzruzQ9eNYAFEis6TY2r0ysStt7o
-
-2. Download NDK https://mega.nz/#!6M9RgCRA!mTY9bsYXanfTfINtq5_9CFdWTfWLHbQdKVmF_rHBVaY
-
-3. Clone ModdedPE https://github.com/TimScriptov/ModdedPE
-
-4. The build apk is /storage/emulated/0/Android/data/com.aide.ui/cache/apk/app.apk
-
-Or Download Android Studio
+Download Android Studio v3.4.1+
 
 ### Licenses
 Cydia Substrate framework by Saurik, licensed under the GNU Lesser General Public License.<br>
@@ -31,11 +23,8 @@ Card View Library, licensed under the Apache License 2.0.<br>
 Android Support Library, licensed under the Apache License 2.0.<br>
 Support Design Library, licensed under the Apache License 2.0.<br>
 
-### Privacy Policy
-<https://github.com/TimScriptov/ModdedPE/tree/master/PrivacyPolicy>
-
 ### Author
-> [ModelPart][2]<br>
+> [Listerily][2]<br>
 > [TimScriptov][3]<br>
 > [Ramzan Elmurzaev][4]<br>
 

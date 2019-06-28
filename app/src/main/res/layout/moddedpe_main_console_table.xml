@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="90dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="90dp">
+        android:layout_height="90dp"
+        tools:ignore="UselessParent">
 
         <com.mcal.mcdesign.widget.RepeatableImageView
             android:layout_width="match_parent"
@@ -20,14 +23,14 @@
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="30dp">
 
-            <android.support.v7.widget.AppCompatImageButton
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/moddedpe_main_play_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:background="@drawable/moddedpe_main_start_button_drawable" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -36,23 +39,26 @@
 
         </RelativeLayout>
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moddedpe_main_text_view_app_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#DEDEDE" />
+            android:textColor="#DEDEDE"
+            android:layout_alignParentStart="true" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/moddedpe_main_text_view_target_mc_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="#DEDEDE" />
+            android:textColor="#DEDEDE"
+            android:layout_alignParentEnd="true"
+            tools:ignore="RelativeOverlap" />
 
     </RelativeLayout>
 
