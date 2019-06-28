@@ -36,8 +36,8 @@ Support Design Library, licensed under the Apache License 2.0.<br>
 
 ### Author
 > [ModelPart][2]<br>
-> [TimScriptov][3]
-> [Ramzan Elmurzaev][4]
+> [TimScriptov][3]<br>
+> [Ramzan Elmurzaev][4]<br>
 
 [1]: https://github.com/TimScriptov/ModdedPE/blob/master/Art/title_logo.png
 [2]: https://github.com/listerily
