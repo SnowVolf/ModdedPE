@@ -1,1 +1,3 @@
-include ':app'
+include ':app', ':moddedpe-sdk', ':substrate'
+project(':moddedpe-sdk').projectDir = new File('app/libs/moddedpe-sdk')
+project(':substrate').projectDir = new File('app/libs/substrate')
