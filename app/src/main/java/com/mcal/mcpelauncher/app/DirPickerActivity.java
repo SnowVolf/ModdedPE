@@ -39,6 +39,8 @@ import com.mcal.pesdk.utils.LauncherOptions;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class DirPickerActivity extends BaseActivity {
     public static final int REQUEST_PICK_DIR = 3;
@@ -177,6 +179,17 @@ public class DirPickerActivity extends BaseActivity {
                     filesInCurrentPath.add(fileItem);
             }
         }
+
+        Collections.sort(filesInCurrentPath, new Comparator<File>() {
+            @Override
+            public int compare(File o1, File o2) {
+                if (o1.isDirectory() & o2.isFile()) {
+                    return -1;
+                } else if (o1.isFile() & o2.isDirectory()) {
+                    return 1;
+                } else return o1.getName().compareToIgnoreCase(o2.getName());
+            }
+        });
 
         ListView fileListView = (ListView) findViewById(R.id.picker_dir_list_view);
         fileListView.setAdapter(new FileAdapter());

@@ -38,6 +38,8 @@ import androidx.appcompat.widget.AppCompatTextView;
 import com.mcal.mcpelauncher.R;
 import com.mcal.pesdk.utils.LauncherOptions;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class MCPkgPickerActivity extends BaseActivity {
@@ -150,6 +152,17 @@ public class MCPkgPickerActivity extends BaseActivity {
     }
 
     private class PackageListAdapter extends BaseAdapter {
+
+        public PackageListAdapter() {
+            Collections.sort(mInstalledPackages, new Comparator<PackageInfo>() {
+                PackageManager pm = getPackageManager();
+
+                @Override
+                public int compare(PackageInfo o1, PackageInfo o2) {
+                    return pm.getApplicationLabel(o1.applicationInfo).toString().compareToIgnoreCase(pm.getApplicationLabel(o2.applicationInfo).toString());
+                }
+            });
+        }
 
         @Override
         public int getCount() {
