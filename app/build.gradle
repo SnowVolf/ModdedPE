@@ -7,14 +7,25 @@ android {
         applicationId "com.mcal.mcpelauncher"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 871120013
-        versionName "1.12.0.13"
+        versionCode 871130001
+        versionName "1.13.0.1"
     }
+    /*externalNativeBuild {
+        ndkBuild {
+            path 'jni/Android.mk'
+        }
+    }*/
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
     }
 }
 
@@ -27,5 +38,4 @@ dependencies {
     implementation 'com.google.android.material:material:1.0.0'
     implementation 'org.zeroturnaround:zt-zip:1.13'
     implementation 'com.anjlab.android.iab.v3:library:1.0.44'
-    implementation project(path: ':moddedpe-sdk')
 }
