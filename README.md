@@ -1,4 +1,5 @@
-# ModdedPE
+![](https://i.imgur.com/Xd7A4SA.png)
+# ModdedPE!
 ![logo][1]
 --------
 
