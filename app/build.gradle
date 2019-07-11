@@ -7,14 +7,16 @@ android {
         applicationId "com.mcal.mcpelauncher"
         minSdkVersion 15
         targetSdkVersion 29
-        versionCode 871130001
+        versionCode 871130002
         versionName "1.13.0.1"
     }
-    /*externalNativeBuild {
+
+    externalNativeBuild {
         ndkBuild {
-            path 'jni/Android.mk'
+            path 'src/main/jni/Android.mk'
         }
-    }*/
+    }
+
     buildTypes {
         release {
             minifyEnabled true
@@ -32,6 +34,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //implementation project(':Substrate')
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.legacy:legacy-support-v13:1.0.0'
