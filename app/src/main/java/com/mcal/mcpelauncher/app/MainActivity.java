@@ -142,7 +142,9 @@ public class MainActivity extends BaseActivity implements BackgroundSoundPlayer 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        unbind();
+		if(bound) {
+        	unbind();
+		}
     }
 
     @Override
