@@ -8,6 +8,8 @@
 
 -keep class com.mcal.pesdk.nativeapi.** { *; }
 
+-keep class org.slf4j.LoggerFactory
+
 -keep class com.mojang.** { *; }
 -keep class org.fmod.** { *; }
 -keep class Microsoft.** { *; }
