@@ -38,40 +38,40 @@ public class I18n {
         switch (type) {
             case 0:
             default:
-                config.locale = Locale.getDefault();
+                config.setLocale(Locale.getDefault());
                 break;
             case 1:
-                config.locale = Locale.ENGLISH;
+                config.setLocale(Locale.ENGLISH);
                 break;
             case 2:
-                config.locale = Locale.SIMPLIFIED_CHINESE;
+                config.setLocale(Locale.SIMPLIFIED_CHINESE);
                 break;
             case 3:
-                config.locale = Locale.JAPANESE;
+                config.setLocale(Locale.JAPANESE);
                 break;
             case 4:
-                config.locale = new Locale("ru", "RU");
+                config.setLocale(new Locale("ru", "RU"));
                 break;
             case 5:
-                config.locale = Locale.CHINESE;
+                config.setLocale(Locale.CHINESE);
                 break;
             case 6:
-                config.locale = new Locale("tr");// Турецкий язык
+                config.setLocale(new Locale("tr"));// Турецкий язык
                 break;
             case 7:
-                config.locale = new Locale("pt");// Португальский
+                config.setLocale(new Locale("pt"));// Португальский
                 break;
             case 8:
-                config.locale = Locale.FRENCH;
+                config.setLocale(Locale.FRENCH);
                 break;
             case 9:
-                config.locale = new Locale("th");// Тайский
+                config.setLocale(new Locale("th"));// Тайский
                 break;
             case 10:
-                config.locale = new Locale("kk");// Казахский
+                config.setLocale(new Locale("kk"));// Казахский
                 break;
             case 11:
-                config.locale = new Locale("uk");// Украинский
+                config.setLocale(new Locale("uk"));// Украинский
                 break;
         }
         if (!defaultLocale.equals(config.locale))
