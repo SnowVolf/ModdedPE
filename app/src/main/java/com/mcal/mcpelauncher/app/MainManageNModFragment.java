@@ -52,7 +52,14 @@ import com.mcal.pesdk.nmod.ZippedNMod;
 
 import java.util.ArrayList;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class MainManageNModFragment extends BaseFragment implements DataPreloader.PreloadingFinishedListener {
+//##################################################################
     private static final int MSG_SHOW_PROGRESS_DIALOG = 1;
     private static final int MSG_HIDE_PROGRESS_DIALOG = 2;
     private static final int MSG_SHOW_SUCCEED_DIALOG = 3;

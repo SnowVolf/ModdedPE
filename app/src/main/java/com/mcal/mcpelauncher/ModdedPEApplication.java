@@ -22,7 +22,14 @@ import android.content.res.AssetManager;
 import com.mcal.mcpelauncher.utils.UtilsSettings;
 import com.mcal.pesdk.PESdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class ModdedPEApplication extends Application {
+//##################################################################
     public static PESdk mPESdk;
 
     public void onCreate() {

@@ -23,7 +23,14 @@ import com.mcal.mcpelauncher.ModdedPEApplication;
 import com.mcal.mcpelauncher.utils.I18n;
 import com.mcal.pesdk.PESdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class BaseActivity extends MCDActivity {
+//##################################################################
     protected PESdk getPESdk() {
         return ModdedPEApplication.mPESdk;
     }

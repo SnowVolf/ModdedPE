@@ -42,7 +42,14 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class MCPkgPickerActivity extends BaseActivity {
+//##################################################################
     public static final String TAG_PACKAGE_NAME = "package_name";
     public static final int REQUEST_PICK_PACKAGE = 5;
     private static final int MSG_SHOW_LIST_VIEW = 1;

@@ -19,7 +19,14 @@ package com.mcal.pesdk.nativeapi;
 import java.io.File;
 import java.io.IOException;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class LibraryLoader {
+//##################################################################
     private static final String FMOD_LIB_NAME = "libfmod.so";
     private static final String MINECRAFTPE_LIB_NAME = "libminecraftpe.so";
 

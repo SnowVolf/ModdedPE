@@ -43,8 +43,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModFilePickerActivity extends BaseActivity {
+//##################################################################
     public static final int REQUEST_PICK_FILE = 2;
     public final static String TAG_FILE_PATH = "file_path";
     private static final int MSG_SELECT = 1;

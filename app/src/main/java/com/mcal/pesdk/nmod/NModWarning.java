@@ -16,7 +16,14 @@
  */
 package com.mcal.pesdk.nmod;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModWarning {
+//##################################################################
     private int mType;
     private Throwable mCause;
 

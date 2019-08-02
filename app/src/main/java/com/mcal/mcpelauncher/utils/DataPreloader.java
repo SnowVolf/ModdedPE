@@ -21,7 +21,14 @@ import android.content.Context;
 import com.mcal.mcpelauncher.ModdedPEApplication;
 import com.mcal.pesdk.PESdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class DataPreloader {
+//##################################################################
     private PreloadingFinishedListener mListener;
     private boolean mIsSleepingFinished = false;
     private boolean mIsPreloadingFinished = false;

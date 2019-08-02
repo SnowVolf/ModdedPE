@@ -37,7 +37,14 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class ZippedNMod extends NMod {
+//##################################################################
     private ZipFile mZipFile = null;
     private File mFilePath = null;
     private AssetManager mAssets = null;

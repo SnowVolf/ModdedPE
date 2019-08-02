@@ -42,7 +42,14 @@ import java.util.zip.ZipFile;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 class NModExtractor {
+//##################################################################
     private Context mContext;
 
     NModExtractor(Context context) {

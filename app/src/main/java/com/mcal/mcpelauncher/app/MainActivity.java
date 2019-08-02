@@ -38,8 +38,14 @@ import com.mcal.mcpelauncher.utils.UtilsSettings;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends BaseActivity implements BackgroundSoundPlayer {
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
+public class MainActivity extends BaseActivity implements BackgroundSoundPlayer {
+//##################################################################
     private ServiceConnection sc;
     private SoundService ss;
     private boolean bound, paused;

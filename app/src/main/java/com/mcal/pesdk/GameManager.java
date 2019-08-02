@@ -25,7 +25,14 @@ import com.mcal.pesdk.nmod.NModLib;
 import com.mcal.pesdk.utils.AssetOverrideManager;
 import com.mojang.minecraftpe.MainActivity;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class GameManager {
+//##################################################################
     private PESdk mPESdk;
 
     GameManager(PESdk pesdk) {

@@ -34,7 +34,14 @@ import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class ImportNModActivity extends BaseActivity {
+//##################################################################
     private static final int MSG_SUCCEED = 1;
     private static final int MSG_FAILED = 2;
     private UIHandler mUIHandler = new UIHandler();

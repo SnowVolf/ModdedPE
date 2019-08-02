@@ -16,7 +16,14 @@
  */
 package com.mcal.pesdk.nmod;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class ExtractFailedException extends Exception {
+//##################################################################
     public static final int TYPE_JSON_SYNTAX_EXCEPTION = 1;
     public static final int TYPE_IO_EXCEPTION = 2;
     public static final int TYPE_NO_MANIFEST = 3;

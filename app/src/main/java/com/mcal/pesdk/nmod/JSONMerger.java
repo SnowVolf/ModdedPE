@@ -22,7 +22,14 @@ import org.json.JSONObject;
 
 import java.util.Iterator;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 class JSONMerger {
+//##################################################################
     private String mSrc;
     private String mDist;
 

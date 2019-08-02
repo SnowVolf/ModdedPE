@@ -24,7 +24,14 @@ import android.view.View;
 import com.mcal.mcpelauncher.ModdedPEApplication;
 import com.mcal.pesdk.PESdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class MinecraftActivity extends com.mojang.minecraftpe.MainActivity {
+//##################################################################
     protected PESdk getPESdk() {
         return ModdedPEApplication.mPESdk;
     }

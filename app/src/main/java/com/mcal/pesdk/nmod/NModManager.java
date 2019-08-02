@@ -23,7 +23,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 class NModManager {
+//##################################################################
     private ArrayList<NMod> mEnabledNMods = new ArrayList<>();
     private ArrayList<NMod> mAllNMods = new ArrayList<>();
     private ArrayList<NMod> mDisabledNMods = new ArrayList<>();

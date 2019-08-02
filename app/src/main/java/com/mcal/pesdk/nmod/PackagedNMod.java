@@ -28,7 +28,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class PackagedNMod extends NMod {
+//##################################################################
     private Context mPackageContext;
 
     PackagedNMod(String packageName, Context contextThiz, Context packageContext) {

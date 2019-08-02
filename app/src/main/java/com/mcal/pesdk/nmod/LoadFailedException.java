@@ -16,7 +16,14 @@
  */
 package com.mcal.pesdk.nmod;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class LoadFailedException extends Exception {
+//##################################################################
     public static final int TYPE_LOAD_LIB_FAILED = 1;
     public static final int TYPE_IO_FAILED = 2;
     public static final int TYPE_JSON_SYNTAX = 3;

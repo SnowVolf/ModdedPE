@@ -50,7 +50,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class MainSettingsFragment extends PreferenceFragmentCompat {
+//##################################################################
     private UtilsSettings mSettings;
     private Preference mDataPathPreference;
     private Preference mPkgPreference;

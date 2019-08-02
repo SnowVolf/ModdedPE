@@ -30,7 +30,14 @@ import com.anjlab.android.iab.v3.TransactionDetails;
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.data.Constants;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class AboutActivity extends BaseActivity implements BillingProcessor.IBillingHandler {
+//##################################################################
     private static final String URI_GITHUB = "https://github.com/TimScriptov/ModdedPE.git";
     private static final String URI_NMOD_API = "http://github.com/TimScriptov/NModAPI.git";
     private BillingProcessor bp;

@@ -22,7 +22,14 @@ import com.mcal.pesdk.nmod.NModAPI;
 import com.mcal.pesdk.utils.LauncherOptions;
 import com.mcal.pesdk.utils.MinecraftInfo;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class PESdk {
+//##################################################################
     private MinecraftInfo mMinecraftInfo;
     private NModAPI mNModAPI;
     private LauncherOptions mLauncherOptions;

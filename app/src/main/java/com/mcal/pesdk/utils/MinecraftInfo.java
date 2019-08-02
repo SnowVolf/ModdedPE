@@ -23,7 +23,14 @@ import android.content.res.AssetManager;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class MinecraftInfo {
+//##################################################################
     private static String MC_PACKAGE_NAME = "com.mojang.minecraftpe";
 
     private Context mContext;

@@ -24,7 +24,14 @@ import android.os.IBinder;
 
 import com.mcal.mcpelauncher.R;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class SoundService extends Service {
+//##################################################################
     MediaPlayer player;
 
     @Override

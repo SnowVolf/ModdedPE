@@ -20,7 +20,14 @@ import android.os.Bundle;
 
 import com.mojang.minecraftpe.MainActivity;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModLib {
+//##################################################################
     private String mName;
 
     public NModLib(String name) {

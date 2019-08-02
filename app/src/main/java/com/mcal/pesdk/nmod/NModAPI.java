@@ -20,7 +20,14 @@ import android.content.Context;
 
 import java.util.ArrayList;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public final class NModAPI {
+//##################################################################
     private Context mContext;
     private NModManager mNModManager;
     private NModExtractor mExtractor;

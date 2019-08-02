@@ -31,7 +31,14 @@ import com.mcal.pesdk.nmod.NMod;
 import java.io.File;
 import java.io.FileInputStream;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModDescriptionActivity extends BaseActivity {
+//##################################################################
     public final static String TAG_PACKAGE_NAME = "nmod_package_name";
     public final static String TAG_NAME = "nmod_name";
     public final static String TAG_AUTHOR = "author";

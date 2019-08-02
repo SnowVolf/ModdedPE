@@ -16,6 +16,13 @@
  */
 package com.mcal.pesdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class PreloadingInfo {
+//##################################################################
     public static final String NMOD_DATA_TAG = "nmod_data";
 }

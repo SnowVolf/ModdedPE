@@ -16,7 +16,14 @@
  */
 package com.mcal.pesdk.nmod;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 class PackageNameChecker {
+//##################################################################
     static private boolean isValidJavaIdentifier(String className) {
         if (className.length() == 0 || !Character.isJavaIdentifierStart(className.charAt(0)))
             return false;

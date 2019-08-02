@@ -27,7 +27,14 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 import java.util.zip.ZipOutputStream;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModTextEditor {
+//##################################################################
     private NMod mTargetNMod;
     private NModFilePathManager mManager;
     private File[] mParents;

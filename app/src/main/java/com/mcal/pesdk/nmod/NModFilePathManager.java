@@ -20,7 +20,14 @@ import android.content.Context;
 
 import java.io.File;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 class NModFilePathManager {
+//##################################################################
     private static final String FILEPATH_DIR_NAME_NMOD_PACKS = "nmod_packs";
     private static final String FILEPATH_DIR_NAME_NMOD_LIBS = "nmod_libs";
     private static final String FILEPATH_DIR_NAME_NMOD_ICON = "nmod_icon";

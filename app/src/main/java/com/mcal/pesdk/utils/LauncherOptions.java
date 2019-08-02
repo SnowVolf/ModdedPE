@@ -16,7 +16,14 @@
  */
 package com.mcal.pesdk.utils;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public interface LauncherOptions {
+//##################################################################
     String STRING_VALUE_DEFAULT = "default";
 
     boolean isSafeMode();

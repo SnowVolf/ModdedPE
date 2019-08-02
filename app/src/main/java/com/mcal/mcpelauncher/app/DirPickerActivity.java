@@ -42,7 +42,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class DirPickerActivity extends BaseActivity {
+//##################################################################
     public static final int REQUEST_PICK_DIR = 3;
     public final static String TAG_DIR_PATH = "dir_path";
     private static final int MSG_SELECT = 1;

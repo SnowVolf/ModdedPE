@@ -18,9 +18,14 @@ package com.mcal.mcpelauncher.utils;
 
 import android.util.Base64;
 
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class Utils {
-
+//##################################################################
     public static String fromBase64(String message) {
         byte[] data = Base64.decode(message, Base64.DEFAULT);
         return new String(data);

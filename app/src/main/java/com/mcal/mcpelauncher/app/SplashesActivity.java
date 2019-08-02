@@ -26,8 +26,14 @@ import android.view.View;
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.utils.DataPreloader;
 
-public class SplashesActivity extends BaseActivity implements DataPreloader.PreloadingFinishedListener {
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
+public class SplashesActivity extends BaseActivity implements DataPreloader.PreloadingFinishedListener {
+//##################################################################
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

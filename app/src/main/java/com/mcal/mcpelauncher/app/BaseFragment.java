@@ -16,13 +16,19 @@
  */
 package com.mcal.mcpelauncher.app;
 
-
 import androidx.fragment.app.Fragment;
 
 import com.mcal.mcpelauncher.ModdedPEApplication;
 import com.mcal.pesdk.PESdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class BaseFragment extends Fragment {
+//##################################################################
     protected PESdk getPESdk() {
         return ModdedPEApplication.mPESdk;
     }

@@ -28,8 +28,14 @@ import androidx.appcompat.app.AlertDialog;
 import com.mcal.mcpelauncher.R;
 import com.mcal.mcpelauncher.utils.UtilsSettings;
 
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class MainStartFragment extends BaseFragment {
+//##################################################################
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.moddedpe_main, null);

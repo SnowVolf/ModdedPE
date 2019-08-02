@@ -16,8 +16,14 @@
  */
 package com.mcal.mcpelauncher.app;
 
-public interface BackgroundSoundPlayer {
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
+public interface BackgroundSoundPlayer {
+//##################################################################
     void bind();
 
     void unbind();
@@ -25,5 +31,4 @@ public interface BackgroundSoundPlayer {
     void play();
 
     void pause();
-
 }

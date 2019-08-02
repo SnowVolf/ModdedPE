@@ -16,7 +16,14 @@
  */
 package com.mcal.pesdk;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class PreloadException extends Exception {
+//##################################################################
     public static final int TYPE_LOAD_LIBS_FAILED = 1;
     public static final int TYPE_IO_EXCEPTION = 2;
 

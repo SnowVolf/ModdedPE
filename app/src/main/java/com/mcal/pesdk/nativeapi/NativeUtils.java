@@ -22,8 +22,14 @@ import com.mcal.pesdk.utils.LauncherOptions;
 
 import java.io.File;
 
-//@Keep
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NativeUtils {
+//##################################################################
     static {
         nativeRegisterNatives(NativeUtils.class);
     }

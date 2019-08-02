@@ -29,8 +29,15 @@ import androidx.appcompat.widget.AppCompatTextView;
 import com.mcal.mcpelauncher.ModdedPEApplication;
 import com.mcal.mcpelauncher.R;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 @SuppressLint({"InflateParams", "ClickableViewAccessibility"})
 public class ConsoleTableView extends RelativeLayout {
+//##################################################################
     public ConsoleTableView(Context c) {
         super(c);
         addTableView();

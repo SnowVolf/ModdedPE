@@ -21,7 +21,14 @@ import android.content.SharedPreferences;
 
 import com.mcal.pesdk.utils.LauncherOptions;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class UtilsSettings implements LauncherOptions {
+//##################################################################
     private final static String TAG_SETTINGS = "moddedpe_settings";
     private final static String TAG_SAFE_MODE = "safe_mode";
     private final static String TAG_FIRST_LOADED = "first_loaded";

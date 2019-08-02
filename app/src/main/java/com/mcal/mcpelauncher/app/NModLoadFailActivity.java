@@ -39,7 +39,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModLoadFailActivity extends BaseActivity {
+//##################################################################
     private static final String KEY_TYPE_STRING = "type_string";
     private static final String KEY_MESSAGE = "message";
     private static final String KEY_PACKAGE_NAME = "package_name";

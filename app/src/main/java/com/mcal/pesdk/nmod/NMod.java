@@ -31,7 +31,14 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public abstract class NMod {
+//##################################################################
     public static final String MANIFEST_NAME = "nmod_manifest.json";
     public static final int NMOD_TYPE_ZIPPED = 1;
     public static final int NMOD_TYPE_PACKAGED = 2;

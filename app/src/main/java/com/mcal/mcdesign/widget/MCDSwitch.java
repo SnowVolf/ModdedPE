@@ -55,9 +55,9 @@ public class MCDSwitch extends Switch
     @Override
     protected void onDraw(Canvas canvas) {
         if (bitmap == null || bitmapClicked == null) {
-            bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.mcd_checkbox_default);
-            bitmapClicked = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.mcd_checkbox_checked);
-            bitmapNI = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.mcd_checkbox_not_important);
+            bitmap = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.ic_switch_default);
+            bitmapClicked = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.ic_switch_checked);
+            bitmapNI = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.ic_switch_not_important);
 
         }
         if (!super.isClickable())

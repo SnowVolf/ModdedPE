@@ -35,7 +35,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class Preloader {
+//##################################################################
     private Bundle mBundle;
     private PESdk mPESdk;
     private PreloadListener mPreloadListener;

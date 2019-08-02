@@ -38,7 +38,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class NModPackagePickerActivity extends BaseActivity {
+//##################################################################
     public static final String TAG_PACKAGE_NAME = "package_name";
     public static final int REQUEST_PICK_PACKAGE = 1;
     private static final int MSG_SHOW_LIST_VIEW = 1;

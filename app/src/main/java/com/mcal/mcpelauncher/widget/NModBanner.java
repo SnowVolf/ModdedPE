@@ -35,8 +35,15 @@ import com.mcal.pesdk.nmod.NMod;
 import java.util.ArrayList;
 import java.util.Random;
 
+//##################################################################
+
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 @SuppressLint({"InflateParams", "ClickableViewAccessibility"})
 public class NModBanner extends RelativeLayout {
+//##################################################################
     private RelativeLayout mBannerView;
     private Random mRandom = new Random();
     private ArrayList<NMod> mNModArrayList = new ArrayList<NMod>();

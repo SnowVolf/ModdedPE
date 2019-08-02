@@ -2,6 +2,12 @@
 -renamesourcefileattribute SourceFile
 -repackageclasses
 
+-ignorewarnings
+-dontwarn
+-dontnote
+
+-dontobfuscate
+
 #-obfuscationdictionary proguard-dictionary.txt
 #-packageobfuscationdictionary proguard-dictionary.txt
 #-classobfuscationdictionary proguard-dictionary.txt
@@ -10,6 +16,8 @@
 
 -keep class org.slf4j.LoggerFactory
 
+-keep class androidx.arch.** { *; }
+-keep class androidx.lifecycle.** { *; }
 -keep class com.mojang.** { *; }
 -keep class org.fmod.** { *; }
 -keep class Microsoft.** { *; }

@@ -33,8 +33,14 @@ import com.mcal.pesdk.nmod.NMod;
 import java.util.ArrayList;
 import java.util.Random;
 
+//##################################################################
 
+/**
+ * @author Тимашков Иван
+ * @author https://github.com/TimScriptov
+ */
 public class PreloadActivity extends BaseActivity {
+//##################################################################
     private final static int MSG_START_MINECRAFT = 1;
     private final static int MSG_WRITE_TEXT = 2;
     private final static int MSG_ERROR = 3;
