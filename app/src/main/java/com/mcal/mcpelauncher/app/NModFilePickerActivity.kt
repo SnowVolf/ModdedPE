@@ -131,14 +131,13 @@ class NModFilePickerActivity : BaseActivity() {
 
     private inner class FileAdapter : BaseAdapter() {
         init {
-            Collections.sort(filesInCurrentPath!!) { o1, o2 ->
-                if (o1.isDirectory and o2.isFile) {
-                    -1
-                } else if (o1.isFile and o2.isDirectory) {
-                    1
-                } else
-                    o1.name.compareTo(o2.name, ignoreCase = true)
-            }
+            filesInCurrentPath!!.sortWith(Comparator { o1, o2 ->
+                when {
+                    o1.isDirectory and o2.isFile -> -1
+                    o1.isFile and o2.isDirectory -> 1
+                    else -> o1.name.compareTo(o2.name, ignoreCase = true)
+                }
+            })
         }
 
         override fun getCount(): Int {
@@ -155,7 +154,7 @@ class NModFilePickerActivity : BaseActivity() {
             return p1.toLong()
         }
 
-        override fun getView(p1: Int, p2: View, p3: ViewGroup): View {
+        override fun getView(p1: Int, p2: View?, p3: ViewGroup): View {
             var p1 = p1
             val cardView = layoutInflater.inflate(R.layout.nmod_picker_file_item, null) as CardView
 
