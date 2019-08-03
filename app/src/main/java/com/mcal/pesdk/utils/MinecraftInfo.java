@@ -40,7 +40,7 @@ public class MinecraftInfo {
         this.mContext = context;
 
         String mMinecraftPackageName = MC_PACKAGE_NAME;
-        if (!options.getMinecraftPEPackageName().equals(LauncherOptions.STRING_VALUE_DEFAULT))
+        if (!options.getMinecraftPEPackageName().equals(LauncherOptions.Companion.getSTRING_VALUE_DEFAULT()))
             mMinecraftPackageName = options.getMinecraftPEPackageName();
 
         try {
