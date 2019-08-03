@@ -17,7 +17,6 @@
 package com.mcal.mcpelauncher.app
 
 import android.app.Activity
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.os.Environment
@@ -39,7 +38,6 @@ import com.mcal.pesdk.utils.LauncherOptions
 
 import java.io.File
 import java.util.ArrayList
-import java.util.Collections
 import java.util.Comparator
 
 //##################################################################
