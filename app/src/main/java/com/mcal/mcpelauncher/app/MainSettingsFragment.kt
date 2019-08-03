@@ -208,14 +208,14 @@ class MainSettingsFragment : PreferenceFragmentCompat() {
 
         if (requestCode == DirPickerActivity.REQUEST_PICK_DIR && resultCode == Activity.RESULT_OK) {
             val dir = data!!.extras!!.getString(DirPickerActivity.TAG_DIR_PATH)
-            mSettings!!.dataSavedPath = dir!!
+            mSettings.dataSavedPath = dir!!
             if (dir == LauncherOptions.STRING_VALUE_DEFAULT)
                 Snackbar.make(activity!!.window.decorView, getString(R.string.preferences_update_message_reset_data_path), 2500).show()
             else
                 Snackbar.make(activity!!.window.decorView, getString(R.string.preferences_update_message_data_path, *arrayOf<Any>(dir)), 2500).show()
         } else if (requestCode == MCPkgPickerActivity.REQUEST_PICK_PACKAGE && resultCode == Activity.RESULT_OK) {
             val pkgName = data!!.extras!!.getString(MCPkgPickerActivity.TAG_PACKAGE_NAME)
-            mSettings!!.setMinecraftPackageName(pkgName!!)
+            mSettings.setMinecraftPackageName(pkgName!!)
             if (pkgName == LauncherOptions.STRING_VALUE_DEFAULT)
                 Snackbar.make(activity!!.window.decorView, getString(R.string.preferences_update_message_reset_pkg_name), 2500).show()
             else
@@ -249,20 +249,23 @@ class MainSettingsFragment : PreferenceFragmentCompat() {
 
     private fun showPermissionDinedDialog() {
         val builder = AlertDialog.Builder(activity!!)
-        builder.setTitle(R.string.permission_grant_failed_title)
-        builder.setMessage(R.string.permission_grant_failed_message)
-        builder.setPositiveButton(android.R.string.ok) { dialog, which ->
-            val intent = Intent()
-            intent.action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
-            intent.addCategory(Intent.CATEGORY_DEFAULT)
-            intent.data = Uri.parse("package:" + activity!!.packageName)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
-            intent.addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
-            startActivity(intent)
+        builder.apply {
+            setTitle(R.string.permission_grant_failed_title)
+            setMessage(R.string.permission_grant_failed_message)
+            setPositiveButton(android.R.string.ok) { dialog, which ->
+                val intent = Intent()
+                intent.apply {
+                    action = Settings.ACTION_APPLICATION_DETAILS_SETTINGS
+                    addCategory(Intent.CATEGORY_DEFAULT)
+                    data = Uri.parse("package:" + activity!!.packageName)
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK and
+                            Intent.FLAG_ACTIVITY_NO_HISTORY and Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
+                }
+                startActivity(intent)
+            }
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .show()
         }
-        builder.setNegativeButton(android.R.string.cancel, null)
-        builder.show()
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
