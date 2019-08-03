@@ -62,7 +62,7 @@ class MainSettingsFragment : PreferenceFragmentCompat() {
     private lateinit var mDataPathPreference: Preference
     private lateinit var mPkgPreference: Preference
 
-    override fun onCreatePreferences(savedInstanceState: Bundle, rootKey: String) {
+    override fun onCreatePreferences(savedInstanceState: Bundle?, rootKey: String?) {
         addPreferencesFromResource(R.xml.preferences)
 
         mSettings = UtilsSettings(activity!!)
