@@ -161,7 +161,7 @@ class DirPickerActivity : BaseActivity() {
             return p1.toLong()
         }
 
-        override fun getView(p1: Int, p2: View, p3: ViewGroup): View {
+        override fun getView(p1: Int, p2: View?, p3: ViewGroup): View {
             var p1 = p1
             val cardView = layoutInflater.inflate(R.layout.nmod_picker_file_item, null) as CardView
 

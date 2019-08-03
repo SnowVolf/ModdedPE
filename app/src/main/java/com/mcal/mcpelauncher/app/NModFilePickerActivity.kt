@@ -171,14 +171,15 @@ class NModFilePickerActivity : BaseActivity() {
                     val currentCardViewFile = filesInCurrentPath!![--p1]
                     val fileImage = cardView.findViewById<AppCompatImageView>(R.id.nmod_picker_item_card_view_image_view)
 
-                    if (currentCardViewFile.isDirectory)
-                        fileImage.setImageResource(R.drawable.ic_folder)
-                    else if (currentCardViewFile.name.endsWith(".nmod")) {
-                        val bytes = ZipUtil.unpackEntry(currentCardViewFile, "icon.png")
-                        val bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
-                        fileImage.setImageBitmap(bmp)
-                    } else
-                        fileImage.setImageResource(R.drawable.ic_file)
+                    when {
+                        currentCardViewFile.isDirectory -> fileImage.setImageResource(R.drawable.ic_folder)
+                        currentCardViewFile.name.endsWith(".nmod") -> {
+                            val bytes = ZipUtil.unpackEntry(currentCardViewFile, "icon.png")
+                            val bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
+                            fileImage.setImageBitmap(bmp)
+                        }
+                        else -> fileImage.setImageResource(R.drawable.ic_file)
+                    }
 
                     val textFileName = cardView.findViewById<AppCompatTextView>(R.id.nmod_picker_item_card_view_text_name)
                     textFileName.text = currentCardViewFile.name

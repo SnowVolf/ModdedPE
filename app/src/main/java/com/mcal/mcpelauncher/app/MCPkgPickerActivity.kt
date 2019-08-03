@@ -146,7 +146,7 @@ class MCPkgPickerActivity : BaseActivity() {
             return p1.toLong()
         }
 
-        override fun getView(p1: Int, p2: View, p3: ViewGroup): View {
+        override fun getView(p1: Int, p2: View?, p3: ViewGroup): View {
             val pkg = mInstalledPackages!![p1]
             val baseCardView = layoutInflater.inflate(R.layout.pkg_picker_item, null)
             val imageView = baseCardView.findViewById<AppCompatImageView>(R.id.pkg_picker_package_item_card_view_image_view)
