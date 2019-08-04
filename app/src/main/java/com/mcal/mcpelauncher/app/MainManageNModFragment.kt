@@ -223,7 +223,7 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
     }
 
     private fun createDisabledNModView(nmod_: NMod): View {
-        var convertView: View
+        val convertView: View?
         if (nmod_.isBugPack) {
             convertView = LayoutInflater.from(activity).inflate(R.layout.moddedpe_nmod_item_bugged, null)
             val textTitle = convertView!!.findViewById<AppCompatTextView>(R.id.nmod_bugged_item_card_view_text_name)
@@ -277,7 +277,7 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
     }
 
     private fun createEnabledNModView(nmod_: NMod): View {
-        var convertView: View? = null
+        val convertView: View?
         if (nmod_.isBugPack) {
             convertView = LayoutInflater.from(activity).inflate(R.layout.moddedpe_nmod_item_bugged, null)
             val textTitle = convertView!!.findViewById<AppCompatTextView>(R.id.nmod_bugged_item_card_view_text_name)
@@ -445,7 +445,7 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
             return position.toLong()
         }
 
-        override fun getView(position: Int, convertView: View, parent: ViewGroup): View {
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val shouldShowEnabledList = mImportedEnabledNMods.size > 0 && position < mImportedEnabledNMods.size + 1
             if (shouldShowEnabledList) {
                 if (position == 0) {
