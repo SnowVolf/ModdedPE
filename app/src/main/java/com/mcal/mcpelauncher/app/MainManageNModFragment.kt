@@ -223,7 +223,7 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
     }
 
     private fun createDisabledNModView(nmod_: NMod): View {
-        var convertView: View? = null
+        var convertView: View
         if (nmod_.isBugPack) {
             convertView = LayoutInflater.from(activity).inflate(R.layout.moddedpe_nmod_item_bugged, null)
             val textTitle = convertView!!.findViewById<AppCompatTextView>(R.id.nmod_bugged_item_card_view_text_name)
@@ -250,7 +250,7 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
             return convertView
         }
         convertView = LayoutInflater.from(activity).inflate(R.layout.moddedpe_nmod_item_disabled, null)
-        val textTitle = convertView!!.findViewById<AppCompatTextView>(R.id.nmod_disabled_item_card_view_text_name)
+        val textTitle = convertView.findViewById<AppCompatTextView>(R.id.nmod_disabled_item_card_view_text_name)
         textTitle.text = nmod_.name
         val textPkgTitle = convertView.findViewById<AppCompatTextView>(R.id.nmod_disabled_item_card_view_text_package_name)
         textPkgTitle.text = nmod_.packageName
