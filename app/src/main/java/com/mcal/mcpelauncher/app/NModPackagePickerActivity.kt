@@ -118,7 +118,7 @@ class NModPackagePickerActivity : BaseActivity() {
             return p1.toLong()
         }
 
-        override fun getView(p1: Int, p2: View, p3: ViewGroup): View {
+        override fun getView(p1: Int, p2: View?, p3: ViewGroup): View {
             val nmod = nmods[p1]
             val baseCardView = layoutInflater.inflate(R.layout.nmod_picker_package_item, null)
             val imageView = baseCardView.findViewById<AppCompatImageView>(R.id.nmod_picker_package_item_card_view_image_view)
