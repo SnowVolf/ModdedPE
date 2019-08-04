@@ -16,23 +16,23 @@
  */
 package com.mcal.mcpelauncher.app
 
-import android.content.*
+import android.content.ComponentName
+import android.content.Context
+import android.content.Intent
+import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import android.preference.PreferenceManager
 import android.view.MenuItem
 import android.view.View
-
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.PopupMenu
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
-
 import com.mcal.mcpelauncher.R
 import com.mcal.mcpelauncher.utils.UtilsSettings
-
-import java.util.ArrayList
+import java.util.*
 
 //##################################################################
 

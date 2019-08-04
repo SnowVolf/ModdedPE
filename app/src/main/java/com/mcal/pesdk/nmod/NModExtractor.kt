@@ -17,29 +17,15 @@
 package com.mcal.pesdk.nmod
 
 import android.content.Context
-import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.PixelFormat
-import android.graphics.drawable.Drawable
-
 import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
-
-import java.io.BufferedInputStream
-import java.io.ByteArrayOutputStream
-import java.io.File
-import java.io.FileInputStream
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.InputStream
-import java.util.ArrayList
-import java.util.zip.ZipEntry
-import java.util.zip.ZipException
-import java.util.zip.ZipFile
-import java.util.zip.ZipInputStream
-import java.util.zip.ZipOutputStream
+import java.io.*
+import java.util.*
+import java.util.zip.*
 
 //##################################################################
 
@@ -100,13 +86,13 @@ internal class NModExtractor(//#################################################
                 val zipInput = ZipInputStream(BufferedInputStream(FileInputStream(path)))
                 var entry: ZipEntry? = null
 
-                while ({entry = zipInput.nextEntry; entry}() != null) {
+                while ({ entry = zipInput.nextEntry; entry }() != null) {
                     if (!entry!!.isDirectory && !(entry?.name == NMod.MANIFEST_NAME || entry?.name!!.endsWith(File.separator + NMod.MANIFEST_NAME))) {
                         zipOutputStream.putNextEntry(entry)
                         val from = zipFile.getInputStream(entry)
                         var byteRead = 0
                         val buffer = ByteArray(1024)
-                        while ({byteRead = from.read(buffer); byteRead}() != -1) {
+                        while ({ byteRead = from.read(buffer); byteRead }() != -1) {
                             zipOutputStream.write(buffer, 0, byteRead)
                         }
                         from.close()
@@ -157,13 +143,13 @@ internal class NModExtractor(//#################################################
                 nmodFile.createNewFile()
                 val zipOutputStream = ZipOutputStream(FileOutputStream(nmodFile))
                 var entry: ZipEntry? = null
-                while ({entry = zipInput.nextEntry; entry}() != null) {
+                while ({ entry = zipInput.nextEntry; entry }() != null) {
                     if (!entry!!.isDirectory) {
                         zipOutputStream.putNextEntry(entry)
                         val from = zipFile.getInputStream(entry)
                         var byteRead = -1
                         val buffer = ByteArray(1024)
-                        while ({byteRead = from.read(buffer); byteRead}() != -1) {
+                        while ({ byteRead = from.read(buffer); byteRead }() != -1) {
                             zipOutputStream.write(buffer, 0, byteRead)
                         }
                         from.close()
@@ -196,7 +182,7 @@ internal class NModExtractor(//#################################################
             val fileInput = FileInputStream(cachedNModFile)
             var byteRead = 0
             val buffer = ByteArray(1024)
-            while ({byteRead = fileInput.read(buffer); byteRead}() != -1) {
+            while ({ byteRead = fileInput.read(buffer); byteRead }() != -1) {
                 finalFileOutput.write(buffer, 0, byteRead)
             }
             finalFileOutput.close()

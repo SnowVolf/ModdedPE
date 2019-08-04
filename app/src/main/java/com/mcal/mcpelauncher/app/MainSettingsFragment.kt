@@ -23,7 +23,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.Settings
-
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -31,22 +30,14 @@ import androidx.preference.ListPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.SwitchPreference
-
 import com.google.android.material.snackbar.Snackbar
 import com.mcal.mcpelauncher.R
 import com.mcal.mcpelauncher.utils.I18n
 import com.mcal.mcpelauncher.utils.UtilsSettings
 import com.mcal.pesdk.utils.LauncherOptions
-
 import org.zeroturnaround.zip.ZipUtil
 import org.zeroturnaround.zip.commons.FileUtils
-
-import java.io.BufferedInputStream
-import java.io.BufferedReader
-import java.io.File
-import java.io.FileWriter
-import java.io.IOException
-import java.io.InputStreamReader
+import java.io.*
 
 //##################################################################
 

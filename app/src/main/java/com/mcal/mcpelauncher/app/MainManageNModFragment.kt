@@ -18,7 +18,6 @@ package com.mcal.mcpelauncher.app
 
 import android.Manifest
 import android.app.Activity
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
@@ -39,16 +38,12 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.mcal.mcpelauncher.R
 import com.mcal.mcpelauncher.utils.DataPreloader
 import com.mcal.pesdk.nmod.ExtractFailedException
 import com.mcal.pesdk.nmod.NMod
-import com.mcal.pesdk.nmod.PackagedNMod
-import com.mcal.pesdk.nmod.ZippedNMod
-
-import java.util.ArrayList
+import java.util.*
 
 //##################################################################
 
@@ -202,10 +197,9 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
         AlertDialog.Builder(activity!!)
                 .setTitle(R.string.load_fail_title)
                 .setMessage(getString(R.string.load_fail_msg, nmod.loadException!!.toTypeString(),
-                        nmod.loadException!!.cause.toString())).
-                        setPositiveButton(android.R.string.ok) {
-                            p1, _ -> p1.dismiss()
-                        }
+                        nmod.loadException!!.cause.toString())).setPositiveButton(android.R.string.ok) { p1, _ ->
+                    p1.dismiss()
+                }
                 .show()
     }
 

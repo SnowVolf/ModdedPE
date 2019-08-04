@@ -20,19 +20,10 @@ import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-
 import com.mcal.pesdk.ABIInfo
-
-import java.io.BufferedInputStream
-import java.io.File
-import java.io.FileInputStream
-import java.io.FileNotFoundException
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.InputStream
+import java.io.*
 import java.lang.reflect.InvocationTargetException
-import java.lang.reflect.Method
-import java.util.ArrayList
+import java.util.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipInputStream
@@ -96,7 +87,7 @@ internal constructor(packageName: String, thisContext: Context, file: File) : NM
         var entry: ZipEntry? = null
 
         File(nativeLibsPath).mkdirs()
-        while ({entry = zipInput.nextEntry; entry}() != null) {
+        while ({ entry = zipInput.nextEntry; entry }() != null) {
             if (!entry!!.isDirectory && entry!!.name.startsWith("lib" + File.separator + ABIInfo.targetABIType + File.separator)) {
                 val libInputStream = mZipFile.getInputStream(entry)
                 var byteRead: Int = 0
@@ -104,7 +95,7 @@ internal constructor(packageName: String, thisContext: Context, file: File) : NM
                 val outFile = File(nativeLibsPath + File.separator + entry!!.name.substring(entry!!.name.lastIndexOf(File.separator) + 1))
                 outFile.createNewFile()
                 val writerStream = FileOutputStream(outFile)
-                while ({byteRead = libInputStream.read(buffer); byteRead}() != -1) {
+                while ({ byteRead = libInputStream.read(buffer); byteRead }() != -1) {
                     writerStream.write(buffer, 0, byteRead)
                 }
                 libInputStream.close()

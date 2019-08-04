@@ -16,11 +16,9 @@
  */
 package com.mcal.mcdesign.widget
 
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.widget.RelativeLayout
-
 import com.mcal.mcdesign.utils.BitmapRepeater
 import com.mcal.mcpelauncher.R
 

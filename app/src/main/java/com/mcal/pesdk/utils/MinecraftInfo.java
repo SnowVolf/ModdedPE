@@ -30,7 +30,7 @@ import java.util.regex.Pattern;
  * @author https://github.com/TimScriptov
  */
 public class MinecraftInfo {
-//##################################################################
+    //##################################################################
     private static String MC_PACKAGE_NAME = "com.mojang.minecraftpe";
 
     private Context mContext;

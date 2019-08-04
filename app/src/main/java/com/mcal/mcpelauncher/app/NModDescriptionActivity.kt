@@ -18,18 +18,13 @@ package com.mcal.mcpelauncher.app
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.View
-
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
-
 import com.mcal.mcpelauncher.R
 import com.mcal.pesdk.nmod.NMod
-
-import java.io.File
 import java.io.FileInputStream
 
 //##################################################################

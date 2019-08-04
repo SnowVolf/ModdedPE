@@ -1198,9 +1198,9 @@ public class MainActivity extends NativeActivity implements OnKeyListener, WebRe
         /**********************************
          * Bg music                       *
          **********************************/
-    	if(bound) {
-        	unbindService(sc);
-		}
+        if (bound) {
+            unbindService(sc);
+        }
         /**********************************
          * Bg music                       *
          **********************************/

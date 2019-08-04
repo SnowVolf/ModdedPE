@@ -17,6 +17,10 @@ public class ImportService extends Service {
     static final int MSG_CORRELATION_RESPONSE = 837;
     final Messenger mMessenger = new Messenger(new IncomingHandler());
 
+    public IBinder onBind(Intent intent) {
+        return mMessenger.getBinder();
+    }
+
     class IncomingHandler extends Handler {
         IncomingHandler() {
         }
@@ -52,9 +56,5 @@ public class ImportService extends Service {
                     return;
             }
         }
-    }
-
-    public IBinder onBind(Intent intent) {
-        return mMessenger.getBinder();
     }
 }

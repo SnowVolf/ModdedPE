@@ -16,20 +16,14 @@
  */
 package com.mcal.mcpelauncher.app
 
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.view.View
-
 import androidx.appcompat.widget.AppCompatTextView
-
 import com.mcal.mcpelauncher.R
 import com.mcal.pesdk.nmod.ExtractFailedException
 import com.mcal.pesdk.nmod.NMod
-import com.mcal.pesdk.nmod.ZippedNMod
-
 import java.io.File
 import java.net.URI
 import java.net.URISyntaxException

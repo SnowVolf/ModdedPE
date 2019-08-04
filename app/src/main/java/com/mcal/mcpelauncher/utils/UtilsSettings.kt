@@ -17,8 +17,6 @@
 package com.mcal.mcpelauncher.utils
 
 import android.content.Context
-import android.content.SharedPreferences
-
 import com.mcal.pesdk.utils.LauncherOptions
 
 //##################################################################
@@ -64,8 +62,7 @@ class UtilsSettings(private val mContext: Context) : LauncherOptions {
 
     override var dataSavedPath: String
         get() = mContext
-                .getSharedPreferences(TAG_SETTINGS, Context.MODE_PRIVATE).
-                        getString(TAG_DATA_SAVED_PATH, LauncherOptions.STRING_VALUE_DEFAULT)
+                .getSharedPreferences(TAG_SETTINGS, Context.MODE_PRIVATE).getString(TAG_DATA_SAVED_PATH, LauncherOptions.STRING_VALUE_DEFAULT)
                 .toString()
         set(value) {
             val editor = mContext.getSharedPreferences(TAG_SETTINGS, Context.MODE_PRIVATE).edit()
@@ -74,10 +71,10 @@ class UtilsSettings(private val mContext: Context) : LauncherOptions {
         }
 
     override val minecraftPEPackageName: String
-        get() = mContext.
-                getSharedPreferences(TAG_SETTINGS, Context.MODE_PRIVATE)
+        get() = mContext.getSharedPreferences(TAG_SETTINGS, Context.MODE_PRIVATE)
                 .getString(TAG_PKG_NAME, LauncherOptions.STRING_VALUE_DEFAULT)
                 .toString()
+
     fun setMinecraftPackageName(z: String) {
         val editor = mContext.getSharedPreferences(TAG_SETTINGS, Context.MODE_PRIVATE).edit()
         editor.putString(TAG_PKG_NAME, z)

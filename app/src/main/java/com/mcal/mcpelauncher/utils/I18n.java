@@ -28,7 +28,7 @@ import java.util.Locale;
  * @author https://github.com/TimScriptov
  */
 public class I18n {
-//##################################################################
+    //##################################################################
     public static void setLanguage(Activity context) {
         int type = new UtilsSettings(context).getLanguageType();
 

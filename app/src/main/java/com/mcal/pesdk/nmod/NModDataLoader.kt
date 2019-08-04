@@ -18,8 +18,7 @@ package com.mcal.pesdk.nmod
 
 import android.content.Context
 import android.content.SharedPreferences
-
-import java.util.ArrayList
+import java.util.*
 
 //##################################################################
 

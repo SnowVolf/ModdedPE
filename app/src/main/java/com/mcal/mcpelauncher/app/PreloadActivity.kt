@@ -21,17 +21,13 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Message
 import android.widget.LinearLayout
-
 import androidx.appcompat.widget.AppCompatTextView
-
 import com.mcal.mcpelauncher.R
 import com.mcal.mcpelauncher.utils.UtilsSettings
 import com.mcal.pesdk.PreloadException
 import com.mcal.pesdk.Preloader
 import com.mcal.pesdk.nmod.NMod
-
-import java.util.ArrayList
-import java.util.Random
+import java.util.*
 
 //##################################################################
 

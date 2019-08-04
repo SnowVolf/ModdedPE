@@ -18,7 +18,6 @@ package com.mcal.mcpelauncher.app
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
@@ -31,15 +30,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ListView
-
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
-
 import com.mcal.mcpelauncher.R
 import com.mcal.pesdk.utils.LauncherOptions
-
-import java.util.Collections
-import java.util.Comparator
+import java.util.*
 
 //##################################################################
 
