@@ -32,7 +32,7 @@ import com.mcal.pesdk.PESdk
  */
 class MinecraftActivity : com.mojang.minecraftpe.MainActivity() {
     //##################################################################
-    protected val peSdk: PESdk
+    val peSdk: PESdk
         get() = ModdedPEApplication.mPESdk
 
     override fun getAssets(): AssetManager {
@@ -40,7 +40,7 @@ class MinecraftActivity : com.mojang.minecraftpe.MainActivity() {
     }
 
     override fun onCreate(p1: Bundle?) {
-        peSdk.gameManager.onMinecraftActivityCreate(this, p1!!)
+        peSdk.gameManager.onMinecraftActivityCreate(this, p1)
         super.onCreate(p1)
     }
 

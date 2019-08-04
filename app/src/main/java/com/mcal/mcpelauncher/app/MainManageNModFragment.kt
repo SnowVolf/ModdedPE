@@ -448,11 +448,11 @@ class MainManageNModFragment : BaseFragment(), DataPreloader.PreloadingFinishedL
         override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
             val shouldShowEnabledList = mImportedEnabledNMods.size > 0 && position < mImportedEnabledNMods.size + 1
             if (shouldShowEnabledList) {
-                if (position == 0) {
-                    return createCutlineView(R.string.nmod_enabled_title)
+                return if (position == 0) {
+                    createCutlineView(R.string.nmod_enabled_title)
                 } else {
                     val nmodIndex = position - 1
-                    return createEnabledNModView(mImportedEnabledNMods[nmodIndex])
+                    createEnabledNModView(mImportedEnabledNMods[nmodIndex])
                 }
             }
             val disableStartPosition = if (mImportedEnabledNMods.size > 0) mImportedEnabledNMods.size + 1 else 0

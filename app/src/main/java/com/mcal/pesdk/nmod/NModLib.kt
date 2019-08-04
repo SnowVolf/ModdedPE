@@ -33,13 +33,13 @@ class NModLib(//################################################################
 
     private external fun nativeCallOnLoad(name: String, mcVersion: String, apiVersion: String): Boolean
 
-    private external fun nativeCallOnActivityCreate(mame: String, mainActivity: MainActivity, savedInstanceState: Bundle): Boolean
+    private external fun nativeCallOnActivityCreate(mame: String, mainActivity: MainActivity, savedInstanceState: Bundle?): Boolean
 
-    fun callOnActivityCreate(mainActivity: com.mojang.minecraftpe.MainActivity, bundle: Bundle): Boolean {
+    fun callOnActivityCreate(mainActivity: MainActivity, bundle: Bundle?): Boolean {
         return nativeCallOnActivityCreate(mName, mainActivity, bundle)
     }
 
-    fun callOnActivityFinish(mainActivity: com.mojang.minecraftpe.MainActivity): Boolean {
+    fun callOnActivityFinish(mainActivity: MainActivity): Boolean {
         return nativeCallOnActivityFinish(mName, mainActivity)
     }
 

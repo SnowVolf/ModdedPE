@@ -40,7 +40,7 @@ class GameManager internal constructor(//#######################################
     val assets: AssetManager
         get() = mPESdk.minecraftInfo.assets
 
-    fun onMinecraftActivityCreate(activity: MainActivity, savedInstanceState: Bundle) {
+    fun onMinecraftActivityCreate(activity: MainActivity, savedInstanceState: Bundle?) {
         val safeMode = mPESdk.launcherOptions.isSafeMode
         AssetOverrideManager.addAssetOverride(activity.assets, mPESdk.minecraftInfo.minecraftPackageContext.packageResourcePath)
 
