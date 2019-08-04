@@ -108,7 +108,7 @@ class DirPickerActivity : BaseActivity() {
         object : Thread() {
             override fun run() {
                 try {
-                    Thread.sleep(450)
+                    sleep(450)
                 } catch (e: InterruptedException) {
                 }
 
@@ -200,7 +200,7 @@ class DirPickerActivity : BaseActivity() {
         override fun handleMessage(msg: Message) {
             super.handleMessage(msg)
             if (msg.what == MSG_SELECT) {
-                val file = msg.obj as File
+                val file = msg.obj as File?
                 if (file == null) {
                     val lastFile = currentPath!!.parentFile
                     if (isValidParent)

@@ -17,7 +17,6 @@ package com.mcal.mcpelauncher.app
 
 import android.Manifest
 import android.app.Activity
-import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.net.Uri
@@ -47,7 +46,6 @@ import java.io.BufferedReader
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
-import java.io.InputStream
 import java.io.InputStreamReader
 
 //##################################################################
@@ -247,7 +245,7 @@ class MainSettingsFragment : PreferenceFragmentCompat() {
         return true
     }
 
-    private fun showPermissionDinedDialog() {
+    private fun showPermissionDeniedDialog() {
         val builder = AlertDialog.Builder(activity!!)
         builder.apply {
             setTitle(R.string.permission_grant_failed_title)
@@ -284,7 +282,7 @@ class MainSettingsFragment : PreferenceFragmentCompat() {
             if (isAllGranted) {
                 DirPickerActivity.startThisActivity(activity!!)
             } else {
-                showPermissionDinedDialog()
+                showPermissionDeniedDialog()
             }
         }
     }

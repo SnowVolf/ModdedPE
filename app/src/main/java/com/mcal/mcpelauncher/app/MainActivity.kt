@@ -47,8 +47,8 @@ class MainActivity : BaseActivity(), BackgroundSoundPlayer {
     private var bound: Boolean = false
     private var paused: Boolean = false
     private var mMainViewPager: ViewPager? = null
-    private var mManageNModFragment: MainManageNModFragment? = null
-    private var mMainSettingsFragment: MainSettingsFragment? = null
+    private lateinit var mManageNModFragment: MainManageNModFragment
+    private lateinit var mMainSettingsFragment: MainSettingsFragment
 
     override fun bind() {
         bindService(Intent(this, SoundService::class.java), sc, Context.BIND_AUTO_CREATE)
@@ -60,14 +60,14 @@ class MainActivity : BaseActivity(), BackgroundSoundPlayer {
 
     override fun play() {
         if (bound && paused) {
-            ss!!.play()
+            ss?.play()
             paused = false
         }
     }
 
     override fun pause() {
         if (bound && !paused && !isFinishing) {
-            ss!!.pause()
+            ss?.pause()
             paused = true
         }
     }
@@ -84,7 +84,7 @@ class MainActivity : BaseActivity(), BackgroundSoundPlayer {
         titles_list.add(getString(R.string.main_title))
 
         mManageNModFragment = MainManageNModFragment()
-        fragment_list.add(mManageNModFragment!!)
+        fragment_list.add(mManageNModFragment)
         titles_list.add(getString(R.string.manage_nmod_title))
 
         mMainSettingsFragment = MainSettingsFragment()
@@ -165,8 +165,8 @@ class MainActivity : BaseActivity(), BackgroundSoundPlayer {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        mManageNModFragment!!.onActivityResult(requestCode, resultCode, data)
-        mMainSettingsFragment!!.onActivityResult(requestCode, resultCode, data)
+        mManageNModFragment.onActivityResult(requestCode, resultCode, data)
+        mMainSettingsFragment.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onStart() {
